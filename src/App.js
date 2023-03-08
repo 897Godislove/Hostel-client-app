@@ -1,15 +1,20 @@
-import './App.css';
-import { HomePage } from './components/Homepage/HomePage';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Favourite } from "./components/Account/Favourite/Favourite";
+import { Notification } from "./components/Account/Notification/Notification";
+import { Profile } from "./components/Account/Profile/Profile";
+import { HomePage } from "./components/Homepage/HomePage";
 
 function App() {
   return (
-    <div >
-     <HomePage/>
-      {/* <Register/> */}
-      <Login/>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="fav" element={<Favourite />} />
+      <Route path="noti" element={<Notification />} />
+      <Route path="profi" element={<Profile />} />
+      {/* <Route path="reg" element={<Register />} /> */}
+      {/* <Route path="log" element={<Login />} /> */}
+    </Routes>
   );
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, AppBar, Toolbar, Typography, InputBase, styled, Menu, MenuItem } from '@mui/material'
 import { AccountBox, ArrowDropDown, ArrowRight, HolidayVillage, Mail, MoreVert } from '@mui/icons-material';
 import { useState } from 'react';
+import {Link} from 'react-router-dom'
 
 
 const MobileMoreVert = styled(MoreVert)(({theme})=>({
@@ -10,6 +11,11 @@ const MobileMoreVert = styled(MoreVert)(({theme})=>({
         display: 'none'
     }
 }))
+
+const ListLink = styled(Link)({
+  textDecoration: 'none',
+  color: 'black',
+})
 
 const Header = () => {
 
@@ -91,9 +97,9 @@ const Header = () => {
           </Box>          
         </Box>
         <hr/>
-        <MenuItem >Edit profile</MenuItem>
-        <MenuItem >Upgrade account</MenuItem>
-        <MenuItem >Logout</MenuItem>
+        <MenuItem ><ListLink to="profi"> Edit profile</ListLink></MenuItem>
+        <MenuItem ><ListLink> Upgrade account</ListLink></MenuItem>
+        <MenuItem ><ListLink> Logout</ListLink></MenuItem>
       </Menu>
       <Menu
         id="demo-positioned-menu"
@@ -113,8 +119,9 @@ const Header = () => {
         }}
       >
         <MenuItem onClick={(e)=>setHelp(true)}>Help<ArrowRight/> </MenuItem>
-        <MenuItem >Settings</MenuItem>
-        <MenuItem >About Us</MenuItem>
+        <MenuItem ><ListLink to={'/profi'}> Account</ListLink></MenuItem>
+        <MenuItem ><ListLink> About Us</ListLink></MenuItem>
+        <MenuItem ><ListLink> Logout</ListLink></MenuItem>
         <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
@@ -132,9 +139,9 @@ const Header = () => {
           mt: 4
         }}
       >
-        <MenuItem >Help center</MenuItem>
+        <MenuItem ><ListLink> Help center</ListLink></MenuItem>
         <hr/>
-        <MenuItem >Report an issue...</MenuItem>
+        <MenuItem ><ListLink> Report an issue...</ListLink></MenuItem>
       </Menu>
       </Menu>
     </AppBar>
