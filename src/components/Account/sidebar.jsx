@@ -35,6 +35,8 @@ const Ref = styled(Link)({
 const Logo = styled(Link)({
   color: 'white',
   textDecoration: 'none',
+  fontSize: '40px',
+  fontWeight: 600,
 })
 
 export const Sidebar = () => {
@@ -53,7 +55,7 @@ export const Sidebar = () => {
         // position: 'fixed',
       }}
     >
-      <Logo to={'/'}><Typography variant="h3" >Logo</Typography></Logo>
+      <Logo to={'/'}>Logo</Logo>
       <Stack
         sx={{
           mt: 8,
@@ -63,15 +65,15 @@ export const Sidebar = () => {
           <Dashboard sx={{ marginTop: 0.5, marginRight: 4 }} />
           <Typography variant="h6">Dashboard</Typography>
         </Ref>
-        <Ref to={'/profi'}>
+        <Ref to={'/profile'}>
           <Person sx={{ marginTop: 0.5, marginRight: 4 }} />
           <Typography variant="h6">Profile</Typography>
         </Ref>
-        <Ref to={'/fav'}>
+        <Ref to={'/favourite'}>
           <Favorite sx={{ marginTop: 0.5, marginRight: 4 }} />
           <Typography variant="h6">Favourite</Typography>
         </Ref>
-        <Ref to={'/noti'}>
+        <Ref to={'/notification'}>
           <NotificationsActive sx={{ marginTop: 0.5, marginRight: 4 }} />
           <Typography variant="h6">Notification</Typography>
         </Ref>
@@ -91,7 +93,7 @@ export const Sidebar = () => {
           <Feed sx={{ marginTop: 0.5, marginRight: 4 }} />
           <Typography variant="h6">About Us</Typography>
         </Ref>
-        <Ref to={'/'}>
+        <Ref to={'/homepage'}>
           <ArrowBack sx={{ mx: 6, fontSize: '35px'}} />
         </Ref>
       </Stack>

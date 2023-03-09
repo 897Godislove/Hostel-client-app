@@ -1,0 +1,29 @@
+.header__container {
+  /* background: #000; */
+  display: flex;
+  /* grid-template-columns: 3fr 1.5fr; */
+  margin: 2rem;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__right__details {
+  /* display: flex; */
+  /* justify-content: space-between; */
+
+  font-size: 18px;
+}
+
+span {
+  margin-right: 1.5rem;
+}
+
+.header__left {
+  text-align: left;
+}
+
+.header__right__details {
+  text-align: right;
+}
+

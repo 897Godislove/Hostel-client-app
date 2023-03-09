@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, AppBar, Toolbar, Typography, InputBase, styled, Menu, MenuItem } from '@mui/material'
-import { AccountBox, ArrowDropDown, ArrowRight, HolidayVillage, Mail, MoreVert } from '@mui/icons-material';
+import { AccountBox, ArrowDropDown, ArrowRight, HolidayVillage, Mail, MoreVert, Notifications } from '@mui/icons-material';
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
 
@@ -60,6 +60,12 @@ const Header = () => {
                 cursor: 'pointer',
             }}/>
 
+            <ListLink to={"/notification"}><Notifications sx={{
+                display: {xs: 'none', sm: 'block'},
+                fontSize: 30,
+                cursor: 'pointer',
+            }}/></ListLink>
+
             <Box sx={{
               display: {xs: 'none', sm: 'flex'}, gap: {sm: '5px', md: '20px'}, alignItems: 'center'}}>
                 <Box onClick={(e) => setProfile(true)}>
@@ -97,7 +103,7 @@ const Header = () => {
           </Box>          
         </Box>
         <hr/>
-        <MenuItem ><ListLink to="profi"> Edit profile</ListLink></MenuItem>
+        <MenuItem ><ListLink to="profile"> Edit profile</ListLink></MenuItem>
         <MenuItem ><ListLink> Upgrade account</ListLink></MenuItem>
         <MenuItem ><ListLink> Logout</ListLink></MenuItem>
       </Menu>
@@ -119,7 +125,7 @@ const Header = () => {
         }}
       >
         <MenuItem onClick={(e)=>setHelp(true)}>Help<ArrowRight/> </MenuItem>
-        <MenuItem ><ListLink to={'/profi'}> Account</ListLink></MenuItem>
+        <MenuItem ><ListLink to={'/profile'}> Account</ListLink></MenuItem>
         <MenuItem ><ListLink> About Us</ListLink></MenuItem>
         <MenuItem ><ListLink> Logout</ListLink></MenuItem>
         <Menu
@@ -139,9 +145,9 @@ const Header = () => {
           mt: 4
         }}
       >
-        <MenuItem ><ListLink> Help center</ListLink></MenuItem>
+        <MenuItem >Help center</MenuItem>
         <hr/>
-        <MenuItem ><ListLink> Report an issue...</ListLink></MenuItem>
+        <MenuItem ><ListLink to={'/helpcenter'}> Report an issue...</ListLink></MenuItem>
       </Menu>
       </Menu>
     </AppBar>
