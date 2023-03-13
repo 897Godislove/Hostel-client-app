@@ -4,8 +4,8 @@ import { Favourite } from "./components/Account/Favourite/Favourite";
 import { Notification } from "./components/Account/Notification/Notification";
 import { Profile } from "./components/Account/Profile/Profile";
 import { HomePage } from "./components/Homepage/HomePage";
-import  Register  from "./components/Register/Register/Register";
-import  Login  from "./components/Login/Login/Login";
+import  Register  from "./components/Register/Register";
+import  Login  from "./components/Login/Login";
 import HelpCenter from "./components/Help-center/Help-center";
 
 function App() {

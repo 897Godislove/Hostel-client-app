@@ -51,11 +51,11 @@ const Login = () => {
             <div className="login-form-content">
               <div className="login-form-item">
                 <label for="email">Enter Email</label>
-                <input type="text" {...register("email")} />
+                <input type="text" className="input" {...register("email")} />
               </div>
               <div className="login-form-item">
                 <label for="password">Enter Password</label>
-                <input type="password" {...register("password")} />
+                <input type="password" className="input" {...register("password")} />
               </div>
 
               <Linklist to="/homepage"><button type="submit" className="login-button">

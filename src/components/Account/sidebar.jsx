@@ -55,7 +55,7 @@ export const Sidebar = () => {
         // position: 'fixed',
       }}
     >
-      <Logo to={'/'}>Logo</Logo>
+      <Logo to={'/'}>Roojo Logo</Logo>
       <Stack
         sx={{
           mt: 8,
@@ -85,7 +85,7 @@ export const Sidebar = () => {
           <History sx={{ marginTop: 0.5, marginRight: 4 }} />
           <Typography variant="h6">History</Typography>
         </Ref>
-        <Ref>
+        <Ref to={"/helpcenter"}>
           <ContactSupport sx={{ marginTop: 0.5, marginRight: 4 }} />
           <Typography variant="h6">Service & Help</Typography>
         </Ref>

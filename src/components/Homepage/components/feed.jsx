@@ -31,7 +31,7 @@ const Feed = () => {
             borderRadius: 1,
             py: 1,
             px: 3,
-            display: "flex",
+            display: {xs: 'none', sm: 'flex', md: 'flex'},
             alignItems: "center",
           }}
         >

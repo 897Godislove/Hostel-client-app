@@ -11,15 +11,17 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const SmallAvatar = styled(Edit)(({ theme }) => ({
-  width: 20,
-  height: 20,
-  padding: "10px",
+const SmallAvatar = styled(Edit)({ 
+  width: 40,
+  height: 40,
+  padding: "8px",
   borderRadius: "50%",
   backgroundColor: "blue",
   color: "white",
   cursor: "pointer",
-}));
+  marginTop: '5px',
+  marginLeft: '35px'
+});
 
 const Linklist = styled(Link)({
   color: 'white',
@@ -82,6 +84,7 @@ export const Form = () => {
                   alt="Travis Howard"
                   src=""
                   sx={{ width: 130, height: 130 }}
+                  important
                 />
               </Badge>
             </Box>
@@ -93,7 +96,7 @@ export const Form = () => {
                 display: {xs: 'block', md: 'flex'},
               }}
             >
-              <Box sx={{ marginBottom: 3.5 }}>
+              <Box sx={{ marginBottom: '3.5 !important'}}>
                 <Typography sx={{ marginBottom: 1.5 }}>First Name</Typography>
                 <TextField variant="outlined" size="small"></TextField>
               </Box>
@@ -104,11 +107,11 @@ export const Form = () => {
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
               <Typography sx={{ marginBottom: 1.5 }}>Email</Typography>
-              <TextField fullWidth variant="outlined" size="small"></TextField>
+              <TextField fullWidth variant="outlined" size="small" type={'email'}></TextField>
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
               <Typography sx={{ marginBottom: 1.5 }}>Contact Numbers</Typography>
-              <TextField fullWidth variant="outlined" size="small"></TextField>
+              <TextField fullWidth variant="outlined" size="small" type={'number'}></TextField>
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
               <Typography sx={{ marginBottom: 1.5 }}>Address</Typography>
@@ -133,7 +136,7 @@ export const Form = () => {
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
               <Typography sx={{ marginBottom: 1.5 }}>Password</Typography>
-              <TextField fullWidth variant="outlined" size="small"></TextField>
+              <TextField fullWidth variant="outlined" size="small" type={'password'}></TextField>
             </Box>
             <Box
             sx={{
@@ -144,7 +147,7 @@ export const Form = () => {
                 display: {xs: 'block', md: 'flex'},
               }}>
 
-            <Button type="submit" variant="contained"><Linklist to={'/'}>Save</Linklist></Button>
+            <Button type="submit" variant="contained"><Linklist to={'/login'}>Save</Linklist></Button>
             </Box>
           </Box>
         </form>

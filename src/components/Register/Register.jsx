@@ -1,11 +1,9 @@
 import "./Register.scss";
-// import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
 import room from "./pow.jpg";
-import { schema } from "../../../schema/validator";
+import { schema } from "../../schema/validator";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material";
 
@@ -38,22 +36,22 @@ const Register = () => {
             <div className="register-form-content">
               <div className="register-form-item">
                 <label for="email">Enter Email</label>
-                <input type="text" {...register("email")} />
+                <input type="text" className="input" {...register("email")} />
                 <p className="form-error">{errors.email?.message}</p>
               </div>
               <div className="register-form-item">
                 <label for="name">Enter Full Name</label>
-                <input type="text" {...register("fullName")} />
+                <input type="text" className="input" {...register("fullName")} />
                 <p className="form-error">{errors.name?.message}</p>
               </div>
               <div className="register-form-item">
                 <label for="password">Enter Password</label>
-                <input type="password" {...register("password")} />
+                <input type="password" className="input" {...register("password")} />
                 <p className="form-error">{errors.password?.message}</p>
               </div>
               <div className="register-form-item">
                 <label for="phone">Enter Phone Number</label>
-                <input type="tel" {...register("phoneNumber")} />
+                <input type="tel" className="input" {...register("phoneNumber")} />
                 <p className="form-error">{errors.phoneNumber?.message}</p>
               </div>
               <div className="register-form-item">

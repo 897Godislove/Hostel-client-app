@@ -3,13 +3,25 @@ import { Link } from "react-router-dom";
 import "./Help-center.css";
 import images from "./calcenternewer.jpg";
 import Footer from "../footer/footer";
+// import Header from "../header";
+import Navbar from "../navbar";
+import { Stack, styled } from "@mui/material";
 import Header from "../header/header";
+
+const Image = styled('img')({
+  // marginTop: {xs: '35px',sm: '70px', md: '550px'},
+  
+})
 
 const HelpCenter = () => {
   return (
     <div className="help-center__container">
-      <Header />
-      <img src={images} alt="new" />
+      <Header/>
+      {/* <Stack direction={'column'}>
+        <Header/>
+        <Navbar/>
+      </Stack> */}
+      <Image src={images} alt="new" />
 
       <div className="help-center__content">
         <div className="help-center__header">

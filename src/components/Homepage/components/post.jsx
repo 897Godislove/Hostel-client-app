@@ -10,7 +10,7 @@ import React from "react";
 
 const PostDetail = styled(Box)({
   height: 280,
-  width: 180,
+  width: {xs: 100, md: 180},
   borderRadius: 3,
   boxShadow: "0 0 5px 5px rgba(231, 233, 235, 0.8)",
   cursor: 'pointer',
