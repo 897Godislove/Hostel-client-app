@@ -192,7 +192,7 @@ const Header = () => {
           <ListLink> About Us</ListLink>
         </MenuItem>
         <MenuItem>
-          <ListLink> Logout</ListLink>
+          <ListLink to={"/login"}> Logout</ListLink>
         </MenuItem>
         <Menu
           id="demo-positioned-menu"
