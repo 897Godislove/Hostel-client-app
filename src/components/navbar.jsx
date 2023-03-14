@@ -19,7 +19,7 @@ const NavigateTypo = styled(Link)({
 
 const Navbar = () => {
   return (
-    <AppBar sx={{marginTop: '60px', bgcolor:'white', 
+    <AppBar sx={{marginTop: '80px', bgcolor:'white', 
     color:'black', boxShadow:'none',}}>
     <Stack direction={'row'} justifyContent={'center'} spacing={{sm: 10, md: 15}} sx={{
       mb: 2,

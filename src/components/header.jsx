@@ -44,6 +44,7 @@ const Header = () => {
         bgcolor: "white",
         color: "black",
         boxShadow: "none",
+        py: 1,
       }}
     >
       <Toolbar
@@ -60,8 +61,7 @@ const Header = () => {
               cursor: "pointer",
             }}
           >
-            {" "}
-            Roojo Logo{" "}
+            Roojo Logo
           </Typography>
         </ListLink>
 
@@ -71,7 +71,7 @@ const Header = () => {
             display: { xs: "block", sm: "block", md: "none" },
             cursor: "pointer",
           }}
-        ></HolidayVillage>
+        />
 
         <Box
           sx={{

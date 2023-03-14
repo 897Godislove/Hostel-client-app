@@ -55,7 +55,7 @@ export const Sidebar = () => {
         // position: 'fixed',
       }}
     >
-      <Logo to={'/'}>Roojo Logo</Logo>
+      <Logo to={'/homepage'}>Roojo Logo</Logo>
       <Stack
         sx={{
           mt: 8,

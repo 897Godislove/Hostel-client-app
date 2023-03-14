@@ -13,10 +13,10 @@ export const HomePage = () => {
     <Box>
       <Stack direction={'column'}>
         <Header/>
+      <hr/>
         <Navbar/>
       </Stack>
-      <hr/>
-      <Stack direction={'row'} spacing={2} mt={6} mx={4} marginTop={{xs: '35px',sm: '90px', md: '150px'}} marginBottom={5}>
+      <Stack direction={'row'} spacing={2} mx={{xs: 1, sm: 1, md: 3}} marginTop={{xs: '25px',sm: '85px', md: '160px'}} marginBottom={{xs: 2, sm: 2, md: 4}}>
         <Sidebar/>
         <Feed/>
       </Stack>

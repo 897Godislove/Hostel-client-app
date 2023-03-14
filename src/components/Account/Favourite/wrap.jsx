@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Stack, Typography } from '@mui/material'
 import { Box } from "@mui/system";
 import Post from "../../Homepage/components/post";
+import { AccountHead } from "../AccountHead";
 
 export const Wrap = () => {
   return (
@@ -13,14 +14,13 @@ export const Wrap = () => {
         borderBottomRightRadius: 50,
       }}
     >
+      <AccountHead/>
       <Typography
-        variant="h4"
         sx={{
-          p: 3,
-          boxShadow: "5px 3px 5px 3px rgba(231, 233, 235, 0.8)",
-          borderTopRightRadius: 30,
-          textAlign: "center",
-        //   position: 'sticky',
+          p: 3.3,
+          fontSize: '28px',
+          // fontWeight: 400,
+          paddingBottom: 0,
         }}
       >
         My Favourite

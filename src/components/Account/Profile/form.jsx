@@ -1,4 +1,4 @@
-import { Edit } from "@mui/icons-material";
+import { Edit, } from "@mui/icons-material";
 import {
   Avatar,
   Badge,
@@ -8,10 +8,12 @@ import {
   styled,
   TextField,
   Typography,
+  
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { AccountHead } from "../AccountHead";
 
-const SmallAvatar = styled(Edit)({ 
+const SmallAvatar = styled(Edit)({
   width: 40,
   height: 40,
   padding: "8px",
@@ -19,17 +21,17 @@ const SmallAvatar = styled(Edit)({
   backgroundColor: "blue",
   color: "white",
   cursor: "pointer",
-  marginTop: '5px',
-  marginLeft: '35px'
+  marginTop: "5px",
+  marginLeft: "35px",
 });
 
 const Linklist = styled(Link)({
-  color: 'white',
-  textDecoration: 'none',
+  color: "white",
+  textDecoration: "none",
   padding: "3px",
-  fontSize: '18px',
-  // borderRadius: '50%'
-})
+  fontSize: "18px",
+});
+
 
 export const Form = () => {
   return (
@@ -41,17 +43,7 @@ export const Form = () => {
         borderBottomRightRadius: 50,
       }}
     >
-      <Typography
-        variant="h4"
-        sx={{
-          p: 3,
-          boxShadow: "5px 3px 5px 3px rgba(231, 233, 235, 0.8)",
-          borderTopRightRadius: 30,
-          textAlign: "center",
-        }}
-      >
-        My Profile
-      </Typography>
+      <AccountHead/>
       <Box
         sx={{
           display: "flex",
@@ -59,12 +51,14 @@ export const Form = () => {
           p: 2.5,
         }}
       >
-        <Typography variant="h5"> Edit Profile </Typography>
+        <Typography variant="h5" sx={{fontSize: '28px'}}> Edit Profile </Typography>
         <form>
           <Box
-            sx={{
-            //   width: { sx: "100%", md: "500px" },
-            }}
+            sx={
+              {
+                //   width: { sx: "100%", md: "500px" },
+              }
+            }
           >
             <Box
               sx={{
@@ -72,7 +66,7 @@ export const Form = () => {
                 // display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                display: {xs: 'block', md: 'flex'},
+                display: { xs: "block", md: "flex" },
               }}
             >
               <Badge
@@ -93,10 +87,10 @@ export const Form = () => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
-                display: {xs: 'block', md: 'flex'},
+                display: { xs: "block", md: "flex" },
               }}
             >
-              <Box sx={{ marginBottom: '3.5 !important'}}>
+              <Box sx={{ marginBottom: "3.5 !important" }}>
                 <Typography sx={{ marginBottom: 1.5 }}>First Name</Typography>
                 <TextField variant="outlined" size="small"></TextField>
               </Box>
@@ -107,11 +101,23 @@ export const Form = () => {
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
               <Typography sx={{ marginBottom: 1.5 }}>Email</Typography>
-              <TextField fullWidth variant="outlined" size="small" type={'email'}></TextField>
+              <TextField
+                fullWidth
+                variant="outlined"
+                size="small"
+                type={"email"}
+              ></TextField>
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
-              <Typography sx={{ marginBottom: 1.5 }}>Contact Numbers</Typography>
-              <TextField fullWidth variant="outlined" size="small" type={'number'}></TextField>
+              <Typography sx={{ marginBottom: 1.5 }}>
+                Contact Numbers
+              </Typography>
+              <TextField
+                fullWidth
+                variant="outlined"
+                size="small"
+                type={"number"}
+              ></TextField>
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
               <Typography sx={{ marginBottom: 1.5 }}>Address</Typography>
@@ -122,7 +128,7 @@ export const Form = () => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
-                display: {xs: 'block', md: 'flex'},
+                display: { xs: "block", md: "flex" },
               }}
             >
               <Box sx={{ marginBottom: 3.5 }}>
@@ -136,18 +142,25 @@ export const Form = () => {
             </Box>
             <Box sx={{ marginBottom: 3.5 }}>
               <Typography sx={{ marginBottom: 1.5 }}>Password</Typography>
-              <TextField fullWidth variant="outlined" size="small" type={'password'}></TextField>
+              <TextField
+                fullWidth
+                variant="outlined"
+                size="small"
+                type={"password"}
+              ></TextField>
             </Box>
             <Box
-            sx={{
+              sx={{
                 my: 4,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                display: {xs: 'block', md: 'flex'},
-              }}>
-
-            <Button type="submit" variant="contained"><Linklist to={'/login'}>Save</Linklist></Button>
+                display: { xs: "block", md: "flex" },
+              }}
+            >
+              <Button type="submit" variant="contained">
+                <Linklist to={"/login"}>Save</Linklist>
+              </Button>
             </Box>
           </Box>
         </form>
